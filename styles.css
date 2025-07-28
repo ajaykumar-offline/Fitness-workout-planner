@@ -1,0 +1,312 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Workout Cards */
+.workout-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
+}
+
+.workout-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Planner Section */
+#planner {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Exercise List */
+#exercise-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.exercise-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.exercise-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Workout Summary */
+.workout-summary {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.workout-summary small {
+    font-size: 0.85rem;
+}
+
+/* Exercise Details */
+.exercise-item .text-muted {
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.exercise-item .fw-bold {
+    color: var(--dark-color);
+}
+
+/* Social Links */
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Workout Schedule */
+#workout-schedule {
+    min-height: 200px;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Search Bar */
+.input-group {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-left: none;
+}
+
+/* Profile Styles */
+.profile-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.profile-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-item.selected-profile {
+    border-color: var(--primary-color);
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.profile-item:hover .avatar-circle {
+    transform: scale(1.1);
+}
+
+.profile-status {
+    display: flex;
+    align-items: center;
+    color: var(--success-color);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--success-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+.status-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.profile-switch-alert {
+    animation: slideIn 0.3s ease-out;
+}
+
+.profile-switch-icon {
+    font-size: 1.5rem;
+    color: var(--success-color);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Delete button hover effect */
+.delete-profile {
+    transition: all 0.3s ease;
+}
+
+.delete-profile:hover {
+    transform: scale(1.1);
+    background-color: #dc3545;
+}
+
+/* Profile card hover effects */
+.profile-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.profile-item:hover::after {
+    transform: translateX(100%);
+}
+
+/* Alert animations */
+.alert {
+    transition: all 0.3s ease;
+}
+
+.alert.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.alert:not(.show) {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin: 0 auto 1rem;
+    }
+
+    .profile-status {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+} 
